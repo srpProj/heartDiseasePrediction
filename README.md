@@ -25,4 +25,4 @@
   </ul>
     Hence, our ML Web-Application aims to thus reduce the cost incurred by this preventable disease by predicting the outcome based on the datasets given and training an ML model for an Accurate prediction
 </p>
-//Updated Readme to check push again
+//Updated Readme to check push again for the second time
