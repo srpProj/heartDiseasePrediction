@@ -16,7 +16,12 @@
 <li>Support vector machines (SVM)</li>
 <li>Boosted Decision Trees</li>
 <li>Random Forests</li>
-
+  </ul>
+  <h3> Scope : </h3>
+  <ul>
+  <li>Early disease detection</li>
+<li>Patient care and community services</li>
+<li>Cuts Medical Cost.</li>
   </ul>
     Hence, our ML Web-Application aims to thus reduce the cost incurred by this preventable disease by predicting the outcome based on the datasets given and training an ML model for an Accurate prediction
 </p>
