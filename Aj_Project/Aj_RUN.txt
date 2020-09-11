@@ -1,0 +1,37 @@
+1.pip install virtualenv
+
+virtual env 
+
+********you see a env folder*********
+place all my files in there.
+change directory:
+2.cd env
+*************************************
+
+run virtall environment using:
+3.env\Scripts\activate.bat
+**************************************************
+install flask and sql_alchemy:
+
+4.env\Scripts\activate.bat
+
+5.pip install flask
+
+6.pip install SQl_Alchemy
+
+-------------if spelling mistake see google--------
+***************************************************
+run python program to create db:
+
+7.python 
+
+8.from app import db
+-----------if not error ignore warnings-------------------------
+9.db.create_all()
+
+10.exit()
+***************************************************************
+11.python app.py
+
+follow link 127.0.0.1:5000
+

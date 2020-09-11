@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data CHange</title>
+    <h1 style="text-align: center;">UPDATION</h1>
+</head>
+<body>
+    <form action="/" method="POST" style="background-color: rgb(16, 216, 252);padding: 100px;text-align: left;margin: auto;display: table;">
+        <label for="id">P_ID:</label><input type="number" name="id" id="id" min="1" max="3000"><br>
+        <label for="name">Patient name:</label><input type="text" name="name" id="name"><br>
+        <label for="age">Age:</label><input type="number" name="age" id="age" min="1" max="110"><br>
+        <!--<label for="sex">Sex:</label><input type="text" name="sex" id="sex"><br>-->
+        <label for="sex">Sex:</label><input type="radio" id="male" name="sex" value="male"><label>Male</label>
+                               <input type="radio" id="female" name="sex" value="female"><label>Female</label>
+                               <input type="radio" id="other" name="sex" value="other"><label>Other</label><br>
+        <label for="cp">CP:</label><input type="radio" name="cp" id="typical angina" value="typical angina"><label>typical angina</label>
+                           <input type="radio" name="cp" id="atypical angina" value="atypical angina"><label>atypical angina</label>
+                           <input type="radio" name="cp" id="non-anginal pain" value="non-anginal pain"><label>non-anginal pain</label>
+                           <input type="radio" name="cp" id="asymptotic" value="asymptotic"><label>asymptotic</label><br>
+        <label for="trestbps">trestbps:</label><input type="text" name="trestbps" id="trestbps"><label>mm</label><br>
+        <label for="thalach">thalach:</label><input type="text" name="thalach" id="thalach"><br>
+        <label for="chol">chol:</label><input type="text" name="chol" id="chol"><br>
+        <label>fbs:</label><input type="text" name="fbs" id="fbs"><br>
+        <label>resetecg:</label><input type="text" name="resetecg" id="resetecg"><br>
+        <label>exang:</label><input type="text" name="exang" id="exang"><br>
+        <label>oldpeak:</label><input type="text" name="oldpeak" id="oldpeak"><br>
+        <label>slope:</label><input type="radio" name="slope" id="upsloping" value="upsloping"><label>Upsloping</label>
+                           <input type="radio" name="slope" id="flat" value="flat"><label>Flat</label>
+                           <input type="radio" name="slope" id="downsloping" value="downsloping"><label>Downsloping</label><br>
+        <label>ca:(0-3)</label><input type="number" name="ca" id="ca" min="0" max="3"><br>
+        <label>thal:</label><input type="radio" name="thal" id="normal" value="3"><label>3(normal)</label>
+                    <input type="radio" name="thal" id="fixed" value="6"><label>6(fixed)</label>
+                    <input type="radio" name="thal" id="reversable defect" value="7"><label>7(reversable defect)</label><br>
+        <label>num:</label><input type="radio" name="num" id="val 0" value=" less than 50% diameter" ><label>Value 0(less than 50% diameter)</label>
+                           <input type="radio" name="num" id="val 1" value=" greater than 50% diameter" ><label>Value 1(greater than diameter)</label><br>
+        <input type="submit" value="Update Task">
+        
+    </form>
+</body>
+</html>

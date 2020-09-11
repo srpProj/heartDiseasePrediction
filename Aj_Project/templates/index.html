@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Warehouse</title>
+    <h1 style="text-align: center;">Data Collection Center</h1>
+</head>
+<body>
+    <table width="1340" border='8'>
+        <tr>
+            <th><b>1.P_ID</b></th>
+            <th><b>2.Patient Name</b></th>
+            <th><b>3.Age</b></th>
+            <th><b>4.Sex</b></th>
+            <th><b>5.Chest Pain Type</b></th>
+            <th><b>6.trestbps<br><i>(Resting Blood Pressure)</i></b></th>
+            <th><b>7.Thalach<br><i>(Maximum Heart Rate)</i></b></th>
+            <th><b>8.Cholestrol<br><i><b>(chol)</i></b></th>
+            <th><b>9.Fasting Blood Sugar<br>(fbs)</b></th>
+            <th><b>10.resetecg</b></th>
+            <th><b>11.exang</b></th>
+            <th><b>12.oldpeak</b></th>
+            <th><b>13.slope</b></th>
+            <th><b>14.ca</b><i><b>(No of Major Vessels)</i></b></th>
+            <th><b>15.thal</b></th>
+            <th><b>16.num</b><br><i><b>(angiographic disease status)</i></b></th>
+            <th><b>ACTIONS</b></th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.name }}</td>
+                <td>{{ task.age }}</td>
+                <td>{{ task.sex }}</td>
+                <td>{{ task.cp }}</td>
+                <td>{{ task.trestbps }}<label>mm</label></td>
+                <td>{{ task.thalach }}</td>
+                <td>{{ task.chol }}</td>
+                <td>{{ task.fbs }}</td>
+                <td>{{ task.resetecg }}</td>
+                <td>{{ task.exang }}</td>
+                <td>{{ task.oldpeak }}</td>
+                <td>{{ task.slope }}</td>
+                <td>{{ task.ca }}</td>
+                <td>{{ task.thal }}</td>
+                <td>{{ task.num }}</td>
+                <td><a href="/update/{{ task.id }}"><b><i><u>UPDATE</u></i></b></a><br>
+                    <a href="/delete/{{ task.id }} "><b><i><u>DELETE</u></i></b></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+        <form action="/" method="POST" style="background-color: rgb(16, 216, 252);padding: 100px;text-align: left;margin: auto;display: table;">
+             <label for="id">P_ID:</label><input type="number" name="id" id="id" min="1" max="3000"><br>
+             <label for="name">Patient name:</label><input type="text" name="name" id="name"><br>
+             <label for="age">Age:</label><input type="number" name="age" id="age" min="1" max="110"><br>
+             <!--<label for="sex">Sex:</label><input type="text" name="sex" id="sex"><br>-->
+             <label for="sex">Sex:</label><input type="radio" id="male" name="sex" value="male"><label>Male</label>
+                                    <input type="radio" id="female" name="sex" value="female"><label>Female</label>
+                                    <input type="radio" id="other" name="sex" value="other"><label>Other</label><br>
+             <label for="cp">CP:</label><input type="radio" name="cp" id="typical angina" value="typical angina"><label>typical angina</label>
+                                <input type="radio" name="cp" id="atypical angina" value="atypical angina"><label>atypical angina</label>
+                                <input type="radio" name="cp" id="non-anginal pain" value="non-anginal pain"><label>non-anginal pain</label>
+                                <input type="radio" name="cp" id="asymptotic" value="asymptotic"><label>asymptotic</label><br>
+             <label for="trestbps">trestbps:</label><input type="text" name="trestbps" id="trestbps"><label>mm</label><br>
+             <label for="thalach">thalach:</label><input type="text" name="thalach" id="thalach"><br>
+             <label for="chol">chol:</label><input type="text" name="chol" id="chol"><br>
+             <label>fbs:</label><input type="text" name="fbs" id="fbs"><br>
+             <label>resetecg:</label><input type="text" name="resetecg" id="resetecg"><br>
+             <label>exang:</label><input type="text" name="exang" id="exang"><br>
+             <label>oldpeak:</label><input type="text" name="oldpeak" id="oldpeak"><br>
+             <label>slope:</label><input type="radio" name="slope" id="upsloping" value="upsloping"><label>Upsloping</label>
+                                <input type="radio" name="slope" id="flat" value="flat"><label>Flat</label>
+                                <input type="radio" name="slope" id="downsloping" value="downsloping"><label>Downsloping</label><br>
+             <label>ca:(0-3)</label><input type="number" name="ca" id="ca" min="0" max="3"><br>
+             <label>thal:</label><input type="radio" name="thal" id="normal" value="3"><label>3(normal)</label>
+                         <input type="radio" name="thal" id="fixed" value="6"><label>6(fixed)</label>
+                         <input type="radio" name="thal" id="reversable defect" value="7"><label>7(reversable defect)</label><br>
+             <label>num:</label><input type="radio" name="num" id="val 0" value=" less than 50% diameter" ><label>Value 0(less than 50% diameter)</label>
+                                <input type="radio" name="num" id="val 1" value=" greater than 50% diameter" ><label>Value 1(greater than diameter)</label><br>
+             <input type="submit" value="Add Task">
+             
+         </form>
+</body>
+</html>
